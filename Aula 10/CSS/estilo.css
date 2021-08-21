@@ -1,0 +1,107 @@
+/* CSS RESETS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: 'Montserrat', 'sans-serif';
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0; 
+}
+
+input:focus {
+  outline: none;
+}
+
+/* CSS RESETS */
+
+.page-header{
+  display: flex;
+  flex-direction: column;
+  background: #842e8f;
+  color: white;
+  width: 100%;
+  padding: 8px 16px;
+}
+
+.page-header h1 {
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 250px;
+}
+
+.menu a {
+  color: white;
+  font-weight: bold;
+  margin-right: 16px;
+}
+
+#login {
+  max-width: 60%;
+  margin: 0 auto;
+  display: flex;
+  height: calc(100vh - 48px);
+  justify-content: center;
+  align-items: center;
+}
+
+#login-form{
+  padding: 32px;
+  box-shadow: 2px 3px 5px #999;
+}
+
+.row{
+  display: flex;
+  margin: 16px;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.row label{
+  width: 30%;
+  margin-right: 8px;
+  text-align: right;
+}
+
+.row input {
+  width: 70%;
+  padding: 2px;
+}
+
+.button {
+  border: none;
+  width: 100%;
+  padding: 8px;
+  color: white;
+  background: #842e8f;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+  border-bottom: solid 1px transparent;
+}
+
+.button:hover {
+  background:#5c1d64;
+}
+
+#criar-conta {
+  font-size: 14px;
+}
