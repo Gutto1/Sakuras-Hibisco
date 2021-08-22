@@ -19,13 +19,37 @@
     <nav>
       <ul class="menu">
         <li><a href="#"> Início </a></li>
-        <li><a href="#"> Meus jogos </a></li>
+        <li><a href="lista.html"> Meus jogos </a></li>
       </ul>
     </nav>
   </header>
 
-  <section>
-    CADASTRO
+  <section id="section-cadastro-jogos">
+    <form id="cadastro-jogos" onsubmit="event.preventDefault()">
+      <div class="row">
+        <label for="nome">Nome</label> <input type="text" name="nome" />
+      </div>
+      <div class="row">
+        <label for="preco">Preço</label> <input type="number" name="preco" />
+      </div>
+      <div class="row">
+        <label for="genero">Gênero</label>
+        <select name="genero">
+          <option>MMORPG</option>
+          <option>AÇÃO</option>
+          <option>AVENTURA</option>
+          <option>CARTAS</option>
+          <option>LUTA</option>
+          <option>OUTRO</option>
+        </select>
+      </div>
+      <div class="row">
+        <button class="button" onclick="salvarJogo()">
+          Salvar
+        </button>
+      </div>
+    </form>
   </section>
+  <script src="../JS/scripts.js"></script>
 </body>
 </html>

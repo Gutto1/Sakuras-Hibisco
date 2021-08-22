@@ -19,12 +19,15 @@
   </header>
 
   <section id="login">
-    <form id="login-form" method="POST">
+    <form id="login-form" method="POST" onsubmit="event.preventDefault()">
       <div class="row">
         <label for="usuario">Usuário: </label> <input type="text" name="usuario" id="usuario" class="text-input" />
       </div>
       <div class="row">
         <label for="senha">Senha: </label> <input type="password" name="senha" id="senha" class="text-input" />
+      </div>
+      <div class="row" id="erro">
+        <span>Usuário ou senha incorretos</span>
       </div>
       <div class="row">
         <button class="button" onclick="login()">
@@ -36,6 +39,6 @@
       </div>
     </form>
   </section>
-
+  <script src="../JS/scripts.js"></script>
 </body>
 </html>

@@ -19,7 +19,7 @@
   </header>
 
   <section id="login">
-    <form id="login-form" method="POST">
+    <form id="cadastro" method="POST" onsubmit="event.preventDefault()">
       <div class="row">
         <label for="usuario">Usuário: </label> <input type="text" name="usuario" id="usuario" class="text-input" />
       </div>
@@ -29,8 +29,11 @@
       <div class="row">
         <label for="repita-senha">Confirmar senha: </label> <input type="password" name="confirmar-senha" id="repita-senha" class="text-input" />
       </div>
+      <div class="row" id="erro">
+        <span>As senhas não são idênticas</span>
+      </div>
       <div class="row">
-        <button class="button">
+        <button class="button" onclick="criarConta()">
           Salvar
         </button>
       </div>

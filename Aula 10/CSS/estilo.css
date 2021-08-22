@@ -52,16 +52,16 @@ input:focus {
   margin-right: 16px;
 }
 
-#login {
+#login, #section-cadastro-jogos {
   max-width: 60%;
   margin: 0 auto;
   display: flex;
-  height: calc(100vh - 48px);
+  height: calc(100vh - 64px);
   justify-content: center;
   align-items: center;
 }
 
-#login-form{
+#login-form, #cadastro, #cadastro-jogos{
   padding: 32px;
   box-shadow: 2px 3px 5px #999;
 }
@@ -71,6 +71,11 @@ input:focus {
   margin: 16px;
   justify-content: flex-start;
   align-items: baseline;
+}
+
+#erro{
+  color: red;
+  opacity: 0;
 }
 
 .row label{
@@ -83,6 +88,7 @@ input:focus {
   width: 70%;
   padding: 2px;
 }
+
 
 .button {
   border: none;
@@ -104,4 +110,53 @@ input:focus {
 
 #criar-conta {
   font-size: 14px;
+}
+
+#lista-jogos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 64px);
+}
+
+#lista-jogos div {
+  box-shadow: 2px 2px 5px #999;
+  padding: 48px;
+  border-radius: 8px;
+  position: relative;
+}
+
+#lista-jogos a {
+  position: absolute;
+  right: 48px;
+  bottom: 10px;
+  background: #842e8f;
+  color: white;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+select {
+  width: 70%;
+}
+
+.notificacao {
+  position: absolute;
+  bottom: 50px;
+  padding: 8px;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  width: 60%;
 }
