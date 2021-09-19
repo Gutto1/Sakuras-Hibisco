@@ -1,7 +1,7 @@
 const api = axios.create({
   baseURL: 'https://gorest.co.in/public/v1/',
   timeout: 2500,
-  headers: { Authorization: 'Bearer 8d3a8794a60deadea9bc41663aae42c09730113b0394c7e82abbd5563158f1ca' },
+  headers: { Authorization: 'Bearer cola seu access token aqui' },
 })
 
 const getUsers = async () => {
