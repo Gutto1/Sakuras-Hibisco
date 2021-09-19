@@ -1,0 +1,11 @@
+#listaUsers{
+  border: solid 2px #333;
+  border-collapse: collapse;
+}
+th{
+  border: solid 1px #333;
+  padding: 4px;
+}
+td{
+  border: solid 1px #333;
+}
