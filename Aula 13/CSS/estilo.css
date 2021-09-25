@@ -1,0 +1,142 @@
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* Fim Reset */
+
+/* Variáveis */
+:root {
+  --black: #333;
+  --default-radius: 8px;
+}
+
+/* Variáveis */
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding: 4px 16px;
+  box-shadow: 2px 2px 5px #ccc;
+  position: relative;
+  align-items: center;
+}
+
+.menu-container {
+  display: flex;
+  align-self: flex-end;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu-link {
+  color: var(--black);
+  margin: 4px;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 395ms ease-in-out;
+}
+
+.menu-link:hover {
+  background: var(--black);
+  color: white;
+}
+
+.menu-link-active {
+  border-bottom: solid 2px var(--black);
+  font-weight: bold;
+}
+
+.main-content {
+  display: flex;
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.section {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.loading div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #9e55ce transparent transparent transparent;
+}
+
+.loading div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.loading div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.loading div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.tabela-usuarios {
+  display: none;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tabela-usuarios tr {
+  width: 100%;
+}
+
+.tabela-usuarios th {
+  text-align: left;
+  padding: 8px;
+}
+
+.tabela-usuarios td {
+  padding: 8px;
+  text-align: left;
+}
+
+.tabela-usuarios tr:nth-child(odd) {
+  background: #835ec0;
+  color: white;
+}
