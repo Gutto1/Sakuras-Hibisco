@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../CSS/estilo.css" />
-  <title>Novo Usuario</title>
+  <title>Editar Usuario</title>
 </head>
 <body>
   
@@ -15,14 +15,14 @@
     <nav class="menu-container">
       <ul class="menu">
         <li class="menu-link"> <a href="index.html"> Início </a> </li>
-        <li class="menu-link menu-link-active"> <a href="#"> Novo usuário </a> </li>
+        <li class="menu-link menu-link-active"> <a href="novoUsuario.html"> Novo usuário </a> </li>
       </ul>
     </nav>
   </header>
 
   <main class="main-content">
     <section class="section">
-      <form onsubmit="event.preventDefault()" id="novoUsuario">
+      <form onsubmit="event.preventDefault()" id="editarUsuario">
         <div class="linha">
           <span> Nome: </span> <input type="text" name="nome" />
         </div>
@@ -40,7 +40,7 @@
         </div>
 
         <div class="linha">
-          <button onclick="novoUsuario()">Salvar</button>
+          <button onclick="editarUsuario()">Editar</button>
         </div>
       </form>
     </section>
@@ -48,5 +48,8 @@
 
   <script src="../JS/api.js"></script>
   <script src="../JS/usuario.js"></script>
+  <script>
+    buscarUsuario()
+  </script>
 </body>
 </html>

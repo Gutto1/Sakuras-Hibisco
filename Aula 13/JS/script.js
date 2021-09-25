@@ -1,3 +1,8 @@
+const editarUsuario = (id) => {
+  // navegar para uma página de edição de usuario passando o id como parâmetro na rota
+  location = `editarUsuario.html?id=${id}`
+}
+
 async function inicializaTela() {
   const usuarios = await getUsers()
   const tabela = document.querySelector('.tabela-usuarios')
@@ -18,6 +23,7 @@ async function inicializaTela() {
     linha.appendChild(genero)
     linha.appendChild(email)
     linha.appendChild(status)
+    linha.setAttribute('onclick', `editarUsuario(${usuario.id})`)
 
     tabela.appendChild(linha)
   })
