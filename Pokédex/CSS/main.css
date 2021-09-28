@@ -1,0 +1,129 @@
+/* CSS start */
+html,body{
+    background: #fff;
+    font-family:"Russo One",sans-serif;
+    font-size:16px;
+    text-align:center;
+    color: #FFBDED
+}
+
+/* Header Line */
+
+header {
+    position:relative;
+    width: 100%;
+    height: 10vw;
+  
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    transform: rotate(-0.29deg);
+}
+
+#hibisco {
+    fill: #FFBDED;
+    width: 6vw;
+    height: 6vw;
+    vertical-align:middle;
+}
+
+h1 {
+    font-family:"Russo One",sans-serif;
+    font-size: 5vw;
+    color: #FFBDED;
+    margin:1vw;
+}
+
+h4 {
+    font-family: "Russo One",sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #FFBDED;
+}
+
+a {
+    color:inherit;
+    text-decoration:none;
+}
+
+a:hover{
+    transition: color 0.5s;
+}
+
+img {
+    vertical-align:middle;
+    border-style:none;
+    width:200px;
+    margin: 50px;
+  }
+
+input {
+    border: none;
+    border-bottom: solid #FFBDED 2px;
+    font-family:"Russo One",sans-serif;
+    color: #B0AEAE;
+    text-align: center;
+    width: 80%;
+    height: 30px;
+}
+
+input:focus{
+    outline: none;
+    border-color: #FFA9E8;
+}
+
+button {
+    background: #FFBDED;
+    border: none;
+    border-radius: 4px;
+    color: #FFF;
+
+    text-align: center;
+    text-decoration: none;
+    font-family:"Russo One",sans-serif;
+    font-size: 38px;
+    cursor: pointer;
+
+    width: 80%;
+    height: 5vw;
+    margin-top: 10px;
+    margin-bottom:50px;
+    padding: 6px;
+
+}
+
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.caixa-icones{
+  margin:20px;
+  flex: 10%
+}
+
+.icones{
+    fill: #FFF;
+    width: 100px;
+    height: 100px;
+
+    background: #FFBDED;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.icones:hover{
+    background: #FFA9E8;
+
+}
+
+
+@media (max-width: 767px) {
+  .caixa-icones {
+    flex: 100%;
+  }
+}
+
+
+
+
+
