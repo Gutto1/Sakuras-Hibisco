@@ -1,0 +1,233 @@
+/* CSS start */
+.type_normal {
+    font-family:"Russo One",sans-serif;
+    font-size:22px;
+    font-weight: 300;
+    text-align:center;
+    padding: 10px;
+    color: #fff;
+    background: #a8a878;
+    width: 100px;
+    height: 22px;
+}
+
+.type_fighting {
+    font-family:"Russo One",sans-serif;
+    font-size:22px;
+    font-weight: 300;
+    text-align:center;
+    padding: 10px;
+    color: #fff;
+    background: #c03028;
+    width: 100px;
+    height: 22px;
+}
+
+.type_flying {
+    font-family:"Russo One",sans-serif;
+    font-size:22px;
+    font-weight: 300;
+    text-align:center;
+    padding: 10px;
+    color: #fff;
+    background: #a890f0;
+    width: 100px;
+    height: 22px;
+}
+
+.type_poison {
+    font-family:"Russo One",sans-serif;
+    font-size:22px;
+    font-weight: 300;
+    text-align:center;
+    padding: 10px;
+    color: #fff;
+    background: #a040a0;
+    width: 100px;
+    height: 22px;
+}
+
+.type_ground {
+    font-family:"Russo One",sans-serif;
+    font-size:22px;
+    font-weight: 300;
+    text-align:center;
+    padding: 10px;
+    color: #fff;
+    background: #e0c068;
+    width: 100px;
+    height: 22px;
+}
+
+.type_rock {
+    font-family:"Russo One",sans-serif;
+    font-size:22px;
+    font-weight: 300;
+    text-align:center;
+    padding: 10px;
+    color: #fff;
+    background: #b8a038;
+    width: 100px;
+    height: 22px;
+}
+
+.type_bug {
+    font-family:"Russo One",sans-serif;
+    font-size:22px;
+    font-weight: 300;
+    text-align:center;
+    padding: 10px;
+    color: #fff;
+    background: #a8b820;
+    width: 100px;
+    height: 22px;
+}
+
+.type_ghost {
+    font-family:"Russo One",sans-serif;
+    font-size:22px;
+    font-weight: 300;
+    text-align:center;
+    padding: 10px;
+    color: #fff;
+    background: #705898;
+    width: 100px;
+    height: 22px;
+}
+
+.type_steel {
+    font-family:"Russo One",sans-serif;
+    font-size:22px;
+    font-weight: 300;
+    text-align:center;
+    padding: 10px;
+    color: #fff;
+    background: #b8b8d0;
+    width: 100px;
+    height: 22px;
+}
+
+.type_unknown {
+    font-family:"Russo One",sans-serif;
+    font-size:22px;
+    font-weight: 300;
+    text-align:center;
+    padding: 10px;
+    color: #fff;
+    background: #68a090;
+    width: 100px;
+    height: 22px;
+}
+
+.type_fairy {
+    font-family:"Russo One",sans-serif;
+    font-size:22px;
+    font-weight: 300;
+    text-align:center;
+    padding: 10px;
+    color: #fff;
+    background: #ee99ac;
+    width: 100px;
+    height: 22px;
+}
+
+.type_dark {
+    font-family:"Russo One",sans-serif;
+    font-size:22px;
+    font-weight: 300;
+    text-align:center;
+    padding: 10px;
+    color: #fff;
+    background: #705848;
+    width: 100px;
+    height: 22px;
+}
+
+.type_dragon {
+    font-family:"Russo One",sans-serif;
+    font-size:22px;
+    font-weight: 300;
+    text-align:center;
+    padding: 10px;
+    color: #fff;
+    background: #7038f8;
+    width: 100px;
+    height: 22px;
+}
+
+.type_ice {
+    font-family:"Russo One",sans-serif;
+    font-size:22px;
+    font-weight: 300;
+    text-align:center;
+    padding: 10px;
+    color: #fff;
+    background: #98d8d8;
+    width: 100px;
+    height: 22px;
+}
+
+.type_psychic {
+    font-family:"Russo One",sans-serif;
+    font-size:22px;
+    font-weight: 300;
+    text-align:center;
+    padding: 10px;
+    color: #fff;
+    background: #f85888;
+    width: 100px;
+    height: 22px;
+}
+
+.type_electric {
+    font-family:"Russo One",sans-serif;
+    font-size:22px;
+    font-weight: 300;
+    text-align:center;
+    padding: 10px;
+    color: #fff;
+    background: #f8d030;
+    width: 100px;
+    height: 22px;
+}
+
+.type_grass {
+    font-family:"Russo One",sans-serif;
+    font-size:22px;
+    font-weight: 300;
+    text-align:center;
+    padding: 10px;
+    color: #fff;
+    background: #78c850;
+    width: 100px;
+    height: 22px;
+}
+
+.type_water {
+    font-family:"Russo One",sans-serif;
+    font-size:22px;
+    font-weight: 300;
+    text-align:center;
+    padding: 10px;
+    color: #fff;
+    background: #6890f0;
+    width: 100px;
+    height: 22px;
+}
+
+.type_fire {
+    font-family:"Russo One",sans-serif;
+    font-size:22px;
+    font-weight: 300;
+    text-align:center;
+    padding: 10px;
+    color: #fff;
+    background: #f08030;
+    width: 100px;
+    height: 22px;
+}
+
+
+
+
+

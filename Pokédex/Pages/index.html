@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" href="../assets/favicon.png" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Russo+One">
   <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../css/header.css">
   <link rel="stylesheet" type="text/css" href="../css/main.css">
   <title>Sakura's Pokédex</title>
 </head>
@@ -27,49 +28,52 @@
   <!-- Fim do Header -->
 
   <!-- Início do Conteúdo -->
-  <section>
-    <div class="master-ball">
-      <img src="../assets/master_ball.jpg" alt="imagem de uma master ball" />
-    </div>
-    <input type="text" placeholder="Insira o nome ou número do Pokémon" />
-    <button onclick="buscaPokemon()">Buscar</button>
-  </section>
+  <main>
+    <section>
+     <div class="master-ball">
+        <img src="../assets/master_ball.jpg" alt="imagem de uma master ball" />
+      </div>
+      <input type="text" placeholder="Insira o nome ou número do Pokémon" />
+      <button onclick="buscaPokemon()">Buscar</button>
+    </section>
 
   <!-- Início dos Botões -->
-  <section class="botoes">
+    <section class="botoes">
 
-    <div class="caixa-icones">
-      <a href="favoritos.html" aria-label="link para página de favoritos">
+      <div class="caixa-icones">
+        <a href="favoritos.html" aria-label="link para página de favoritos">
       
           <svg id="star" class="icones" data-name="Estrela Favoritos" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 63.09 60"><defs><style>.f934a38c-61f7-4a8d-8194-00cbdc1d0977{fill:#fff;}.eb5ee8ad-3942-45de-888b-4a6417d5e74f{mask:url(#fceadd3a-5d65-435f-b0c5-bd7348d83ffc);}</style><mask id="fceadd3a-5d65-435f-b0c5-bd7348d83ffc" x="0" y="0" width="63.09" height="60" maskUnits="userSpaceOnUse"><g transform="translate(-0.46 -1.35)"><g id="a8adee42-72a7-4af3-96e6-1ece35a27b0c" data-name=" mask fpwkzgDVMu8i6lAjdkbR0my8T8NvuRN4"><path class="f934a38c-61f7-4a8d-8194-00cbdc1d0977" d="M63.54,24.27,47.77,39.64l3.72,21.71L32,51.1,12.51,61.35l3.72-21.71L.46,24.27,22.25,21.1,32,1.35,41.75,21.1Z"/></g></g></mask></defs><path d="M63.54,24.27,47.77,39.64l3.72,21.71L32,51.1,12.51,61.35l3.72-21.71L.46,24.27,22.25,21.1,32,1.35,41.75,21.1Z" transform="translate(-0.46 -1.35)"/><g class="eb5ee8ad-3942-45de-888b-4a6417d5e74f"><path d="M63.54,24.27,47.77,39.64l3.72,21.71L32,51.1,12.51,61.35l3.72-21.71L.46,24.27,22.25,21.1,32,1.35,41.75,21.1Z" transform="translate(-0.46 -1.35)"/></g></svg>
       
-       <h4>Favoritos</h4>
-      </a>
-    </div>
+          <h4>Favoritos</h4>
+        </a>
+      </div>
 
-    <div class="caixa-icones">
-      <a href="recentes.html" aria-label="link para página de Pokémons recentes">
+      <div class="caixa-icones">
+        <a href="recentes.html" aria-label="link para página de Pokémons recentes">
       
-          <svg id="recent" class="icones" data-name="Recentes" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.18 19.5"><path id="a5df673e-d7ce-4367-bbd9-3f49686b758a" data-name="Shape" d="M11.25,21a.76.76,0,0,1,.75-.75,8.26,8.26,0,1,0-6.19-2.8V14.82a.75.75,0,0,1,1.5,0v4.24a.74.74,0,0,1-.75.75H2.32a.75.75,0,0,1,0-1.5H4.57A9.74,9.74,0,1,1,12,21.75a.75.75,0,0,1-.75-.75Zm2.88-4.81-2.66-2.66a.75.75,0,0,1-.22-.53V7.8a.75.75,0,0,1,1.5,0v4.89l2.43,2.43a.75.75,0,1,1-1,1.08l0,0Z" transform="translate(-1.57 -2.25)"/></svg>
+            <svg id="recent" class="icones" data-name="Recentes" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.18 19.5"><path id="a5df673e-d7ce-4367-bbd9-3f49686b758a" data-name="Shape" d="M11.25,21a.76.76,0,0,1,.75-.75,8.26,8.26,0,1,0-6.19-2.8V14.82a.75.75,0,0,1,1.5,0v4.24a.74.74,0,0,1-.75.75H2.32a.75.75,0,0,1,0-1.5H4.57A9.74,9.74,0,1,1,12,21.75a.75.75,0,0,1-.75-.75Zm2.88-4.81-2.66-2.66a.75.75,0,0,1-.22-.53V7.8a.75.75,0,0,1,1.5,0v4.89l2.43,2.43a.75.75,0,1,1-1,1.08l0,0Z" transform="translate(-1.57 -2.25)"/></svg>
 
-        <h4>Recentes</h4>
-      </a>
-    </div>
+          <h4>Recentes</h4>
+        </a>
+      </div>
 
-    <div class="caixa-icones">
-      <a href="pokemon.html">
+      <div class="caixa-icones">
+        <a href="pokemon.html">
 
-          <svg id="random" class="icones" data-name="Aleatorio" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 448"><path d="M505,359A24,24,0,0,1,505,393l-80,80c-15,15-41,4.49-41-17V416H325.21a12,12,0,0,1-8.77-3.81l-70.55-75.6,53.33-57.14L352,336h32V296c0-21.44,25.94-32,41-17ZM12,176H96l52.78,56.55,53.33-57.14-70.55-75.6A12,12,0,0,0,122.79,96H12A12,12,0,0,0,0,108v56A12,12,0,0,0,12,176Zm372,0v40c0,21.46,26,32,41,17l80-80A24,24,0,0,0,505,119l-80-80c-15-15-41-4.47-41,17V96H325.21a12,12,0,0,0-8.77,3.81L96,336H12A12,12,0,0,0,0,348v56a12,12,0,0,0,12,12H122.79a12,12,0,0,0,8.77-3.81L352,176Z" transform="translate(0 -32)"/></svg>
+            <svg id="random" class="icones" data-name="Aleatorio" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 448"><path d="M505,359A24,24,0,0,1,505,393l-80,80c-15,15-41,4.49-41-17V416H325.21a12,12,0,0,1-8.77-3.81l-70.55-75.6,53.33-57.14L352,336h32V296c0-21.44,25.94-32,41-17ZM12,176H96l52.78,56.55,53.33-57.14-70.55-75.6A12,12,0,0,0,122.79,96H12A12,12,0,0,0,0,108v56A12,12,0,0,0,12,176Zm372,0v40c0,21.46,26,32,41,17l80-80A24,24,0,0,0,505,119l-80-80c-15-15-41-4.47-41,17V96H325.21a12,12,0,0,0-8.77,3.81L96,336H12A12,12,0,0,0,0,348v56a12,12,0,0,0,12,12H122.79a12,12,0,0,0,8.77-3.81L352,176Z" transform="translate(0 -32)"/></svg>
 
-          <h4>Pokémon Aleatório</h4>
-      </a>
-    </div>
+            <h4>Pokémon Aleatório</h4>
+        </a>
+      </div>
     </section>
     <!-- Fim dos Botões -->
-
+  </main>
     <!-- Fim do Conteúdo -->
 
-  
+    <!-- Início do Javascript -->
+    <script src="../Scripts/api.js"></script>
 
+    <!-- Fim do Javascript -->
 </body>
 </html>
