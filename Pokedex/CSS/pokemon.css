@@ -42,6 +42,9 @@ main {
 
 .seletores {
   padding: 16px;
+  font-family: 'Consolas', sans-serif;
+  font-weight: bolder;
+  line-height: 10px;
   
 }
 .tipos {
@@ -49,43 +52,28 @@ main {
 }
 
 .shiny {
-  color: #ef2bb8;
-  font-family: 'Consolas', sans- rif;
-  font-weight: bolder;
+  color: #ecef2b;
   font-size: 20px;
-  line-height: 10px;
 }
 
 .female {
   color: #ef2bb8;
-  font-family: 'Consolas', sans-serif;
-  font-weight: bolder;
   font-size: 36px;
-  line-height: 10px;
 }
 
 .male {
   color: #4567df;
-  font-family: 'Consolas', sans-serif;
-  font-weight: bolder;
   font-size: 36px;
-  line-height: 10px;
 }
 
 .fav {
   color: #666;
-  font-family: 'Consolas', sans-serif;
-  font-weight: bolder;
   font-size: 24px;
-  line-height: 10px;
 }
 
 .fav-select {
   color: #990000;
-  font-family: 'Consolas', sans-serif;
-  font-weight: bolder;
   font-size: 24px;
-  line-height: 10px;
 }
 
 .descricao {
