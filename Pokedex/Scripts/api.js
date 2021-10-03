@@ -18,7 +18,13 @@ const formataTela = (pokemon) => {
 }
 
 const formataInformacoes = (flavor) => {
-  document.querySelector('#flavor').innerHTML = `${flavor.flavor_text_entries[0].flavor_text}`
+  var i = 0
+  var value = flavor.flavor_text_entries[i].language.name
+  for(; value !== "en"; i++){
+    value = flavor.flavor_text_entries[i].language.name
+  }
+  value = flavor.flavor_text_entries[i].flavor_text
+  document.querySelector('#flavor').innerHTML = `${value}`
 }
 
 const buscarPokemon = () => {
