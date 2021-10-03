@@ -1,0 +1,138 @@
+/* CSS start */
+html,
+body {
+  background: #fff;
+  font-family: 'Russo One', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #000;
+}
+
+/* Content Line */
+
+@font-face {
+  font-family: 'Consolas';
+  src: url('consolab.ttf') format('TrueType');
+}
+
+#nome {
+  text-transform: capitalize;
+}
+
+.seletores {
+  padding: 16px;
+}
+
+.topo {
+  display: flex;
+  justify-content: center;
+}
+
+.descricao {
+  text-align: justify;
+  padding: 16px;
+}
+
+.tipos {
+  display: flex;
+}
+
+.shiny {
+  color: #ef2bb8;
+  font-family: 'Consolas', sans- rif;
+  font-weight: bolder;
+  font-size: 20px;
+  line-height: 10px;
+}
+
+.female {
+  color: #ef2bb8;
+  font-family: 'Consolas', sans-serif;
+  font-weight: bolder;
+  font-size: 36px;
+  line-height: 10px;
+}
+
+.male {
+  color: #4567df;
+  font-family: 'Consolas', sans-serif;
+  font-weight: bolder;
+  font-size: 36px;
+  line-height: 10px;
+}
+
+/* Footer Line */
+
+footer {
+  position: absolute;
+  bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px;
+}
+
+footer a {
+  font-size: 52px;
+  color: #ffbded;
+}
+
+h6 {
+  margin: 10vw;
+}
+
+.imagem-pokemon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 30%;
+}
+
+#sprite {
+  transform: scale(2);
+}
+
+.nao_encontrado {
+  height: calc(90vh - 52px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nao_encontrado img {
+  width: 100%;
+}
+
+.detalhes_invisivel {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.detalhes {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+main {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.detalhes h2 {
+  color: #000;
+}
+
+/* Responsiveness */
+@media (max-width: 767px) {
+  .section {
+    width: 80%;
+    height: 30%;
+  }
+}
