@@ -15,12 +15,9 @@ body {
   src: url('consolab.ttf') format('TrueType');
 }
 
-#nome {
-  text-transform: capitalize;
-}
-
-.seletores {
-  padding: 16px;
+main {
+  display: flex;
+  align-items: center;
 }
 
 .topo {
@@ -28,11 +25,25 @@ body {
   justify-content: center;
 }
 
-.descricao {
-  text-align: justify;
-  padding: 16px;
+#nome {
+  text-transform: capitalize;
 }
 
+.imagem-pokemon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 30%;
+}
+
+#sprite {
+  transform: scale(2);
+}
+
+.seletores {
+  padding: 16px;
+  
+}
 .tipos {
   display: flex;
 }
@@ -61,6 +72,60 @@ body {
   line-height: 10px;
 }
 
+.fav {
+  color: #666;
+  font-family: 'Consolas', sans-serif;
+  font-weight: bolder;
+  font-size: 24px;
+  line-height: 10px;
+}
+
+.fav-select {
+  color: #990000;
+  font-family: 'Consolas', sans-serif;
+  font-weight: bolder;
+  font-size: 24px;
+  line-height: 10px;
+}
+
+.descricao {
+  text-align: justify;
+  padding: 16px;
+}
+
+.detalhes_invisivel {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.detalhes {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.detalhes h2 {
+  color: #000;
+}
+
+.nao_encontrado {
+  height: calc(90vh - 52px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nao_encontrado img {
+  width: 100%;
+}
+
+
+
 /* Footer Line */
 
 footer {
@@ -81,53 +146,6 @@ h6 {
   margin: 10vw;
 }
 
-.imagem-pokemon {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 30%;
-}
-
-#sprite {
-  transform: scale(2);
-}
-
-.nao_encontrado {
-  height: calc(90vh - 52px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.nao_encontrado img {
-  width: 100%;
-}
-
-.detalhes_invisivel {
-  visibility: hidden;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-
-.detalhes {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-main {
-  height: 60vh;
-  display: flex;
-  align-items: center;
-}
-
-.detalhes h2 {
-  color: #000;
-}
 
 /* Responsiveness */
 @media (max-width: 767px) {
