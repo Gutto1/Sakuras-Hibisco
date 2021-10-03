@@ -3,6 +3,11 @@ const api = axios.create({
   timeout: 2500,
 })
 
+const url = () => {
+  const params = new URLSearchParams(location.search) // retorna todos os parâmetros da URL
+  return params.get('info') // Busca um parâmetro na lista de parâmetros pelo nome
+}
+
 const formataTela = (pokemon) => {
   document.querySelector('#nome').innerHTML = `${pokemon.id} - ${pokemon.name}`
   document.querySelector('#sprite').setAttribute('src', pokemon.sprites.front_default)
@@ -12,9 +17,12 @@ const formataTela = (pokemon) => {
   document.querySelector('.detalhes').style.visibility = 'visible'
 }
 
+const formataInformacoes = (flavor) => {
+  document.querySelector('#flavor').innerHTML = `${flavor.flavor_text_entries[0].flavor_text}`
+}
+
 const buscarPokemon = () => {
-  const params = new URLSearchParams(location.search) // retorna todos os parâmetros da URL
-  const info = params.get('info') // Busca um parâmetro na lista de parâmetros pelo nome
+  const info = url()
 
   api
     .get(`pokemon/${info}`)
@@ -26,4 +34,11 @@ const buscarPokemon = () => {
     })
 }
 
+const buscarPokemonSpecies = async () => {
+  const info = url()
+  const flavor = await api.get(`pokemon-species/${info}`)
+  formataInformacoes(flavor.data)
+}
+
 buscarPokemon()
+buscarPokemonSpecies()
