@@ -7,7 +7,15 @@
   padding: 10px;
   color: #fff;
   width: 100px;
-  height: 22px;
+  flex: 1;
+}
+
+.type:first-child {
+  margin: 5px 5px 5px 0;
+}
+
+.type:last-child {
+  margin: 5px 0px 5px 5px;
 }
 
 .type_normal {

@@ -4,12 +4,19 @@ const api = axios.create({
 })
 
 const formataTela = (pokemon) => {
-  document.querySelector('#nome').innerHTML = `${pokemon.id} - ${pokemon.name}`
+  document.querySelector('#numero').innerHTML = pokemon.id
+  document.querySelector('#nome').innerHTML = pokemon.name
+
   document.querySelector('#sprite').setAttribute('src', pokemon.sprites.front_default)
 
   //depois de preencher todos os dados remove a img do pikachu triste
   document.querySelector('.nao_encontrado').style.display = 'none'
-  document.querySelector('.detalhes').style.visibility = 'visible'
+  document.querySelector('.detalhes_invisivel').classList.add('detalhes')
+  document.querySelector('.detalhes_invisivel').classList.remove('detalhes_invisivel')
+}
+
+const handleNaoEncontrado = () => {
+  document.querySelector('footer').style.display = 'none'
 }
 
 const buscarPokemon = () => {
@@ -21,8 +28,8 @@ const buscarPokemon = () => {
     .then((pokemon) => {
       formataTela(pokemon.data)
     })
-    .catch((erro) => {
-      console.error(erro)
+    .catch(() => {
+      handleNaoEncontrado()
     })
 }
 

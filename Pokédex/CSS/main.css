@@ -80,21 +80,3 @@ button {
 .icones:hover {
   background: #ffa9e8;
 }
-
-/* Pagina detalhes */
-
-.nao_encontrado {
-  height: calc(90vh - 52px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.detalhes {
-  visibility: hidden;
-}
-
-.detalhes h2 {
-  color: #000;
-}
