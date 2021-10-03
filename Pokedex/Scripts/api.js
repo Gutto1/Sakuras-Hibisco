@@ -25,12 +25,7 @@ const handleNaoEncontrado = () => {
 }
 
 const formataInformacoes = (flavor) => {
-  var i = 0
-  var value = flavor.flavor_text_entries[i].language.name
-  for(; value !== "en"; i++){
-    value = flavor.flavor_text_entries[i].language.name
-  }
-  value = flavor.flavor_text_entries[i].flavor_text
+  const value = flavor.flavor_text_entries.find((item) => item.language.name === 'en').flavor_text
   document.querySelector('#flavor').innerHTML = `${value}`
 }
 
