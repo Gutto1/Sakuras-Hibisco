@@ -8,6 +8,7 @@
   color: #fff;
   width: 100px;
   flex: 1;
+  text-transform: capitalize;
 }
 
 .type:first-child {

@@ -14,6 +14,17 @@ const formataTela = (pokemon) => {
 
   document.querySelector('#sprite').setAttribute('src', pokemon.sprites.front_default)
 
+  //cria as divs com os tipos de pokemon
+  const divTipos = document.querySelector('.tipos')
+  pokemon.types.forEach((item) => {
+    const tipo = document.createElement('div')
+    tipo.classList.add('type')
+    tipo.classList.add(`type_${item.type.name}`)
+    tipo.innerHTML = item.type.name
+
+    divTipos.appendChild(tipo)
+  })
+
   //depois de preencher todos os dados remove a img do pikachu triste
   document.querySelector('.nao_encontrado').style.display = 'none'
   document.querySelector('.detalhes_invisivel').classList.add('detalhes')
