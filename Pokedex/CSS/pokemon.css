@@ -44,9 +44,9 @@ main {
   padding: 16px;
   font-family: 'Consolas', sans-serif;
   font-weight: bolder;
-  line-height: 10px;
-  
+  line-height: 10px;  
 }
+
 .tipos {
   display: flex;
 }
@@ -54,26 +54,30 @@ main {
 .shiny {
   color: #ecef2b;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .female {
   color: #ef2bb8;
   font-size: 36px;
+  cursor: pointer;
 }
 
 .male {
   color: #4567df;
   font-size: 36px;
+  cursor: pointer;
 }
 
 .fav {
   color: #666;
   font-size: 24px;
+  cursor: pointer;
+  transition: all 0.2s ;
 }
 
 .fav-select {
   color: #990000;
-  font-size: 24px;
 }
 
 .descricao {

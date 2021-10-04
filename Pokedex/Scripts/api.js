@@ -61,3 +61,7 @@ const buscarPokemonSpecies = async () => {
 
 buscarPokemon()
 buscarPokemonSpecies()
+
+function meuFavorito(seleciona) {
+  seleciona.classList.toggle("fav-select");
+}
