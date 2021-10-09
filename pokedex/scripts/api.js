@@ -66,11 +66,11 @@ const buscarPokemonSpecies = async () => {
 const ativaDesativaShiny = () => {
   const spriteAtual = document.querySelector('#sprite')
   const pokemon = infoPokemon.data.sprites
-  if(pokemon.front_default == spriteAtual.currentSrc) {
+  if(pokemon.front_default == spriteAtual.currentSrc && pokemon.front_shiny != null) {
     document.querySelector('#sprite').setAttribute('src', pokemon.front_shiny)
-  } else if(pokemon.front_female == spriteAtual.currentSrc) {
+  } else if(pokemon.front_female == spriteAtual.currentSrc && pokemon.front_shiny_female != null) {
     document.querySelector('#sprite').setAttribute('src', pokemon.front_shiny_female)
-  } else if(pokemon.front_shiny_female == spriteAtual.currentSrc) {
+  } else if(pokemon.front_shiny_female == spriteAtual.currentSrc && pokemon.front_female != null) {
     document.querySelector('#sprite').setAttribute('src', pokemon.front_female)
   } else {
     document.querySelector('#sprite').setAttribute('src', pokemon.front_default)
@@ -80,10 +80,9 @@ const ativaDesativaShiny = () => {
 const ativaFemaleGender = () => {
   const spriteAtual = document.querySelector('#sprite')
   const pokemon = infoPokemon.data.sprites
-  if(pokemon.front_default == spriteAtual.currentSrc &&
-    pokemon.front_female != null) {
+  if(pokemon.front_default == spriteAtual.currentSrc && pokemon.front_female != null) {
     document.querySelector('#sprite').setAttribute('src', pokemon.front_female)
-  } else if(pokemon.front_shiny == spriteAtual.currentSrc) {
+  } else if(pokemon.front_shiny == spriteAtual.currentSrc && pokemon.front_shiny_female != null) {
     document.querySelector('#sprite').setAttribute('src', pokemon.front_shiny_female)
   }
 }
@@ -91,10 +90,9 @@ const ativaFemaleGender = () => {
 const ativaMaleGender = () => {
   const spriteAtual = document.querySelector('#sprite')
   const pokemon = infoPokemon.data.sprites
-  if(pokemon.front_female == spriteAtual.currentSrc &&
-    pokemon.front_default != null) {
+  if(pokemon.front_female == spriteAtual.currentSrc && pokemon.front_default != null) {
     document.querySelector('#sprite').setAttribute('src', pokemon.front_default)
-  } else if(pokemon.front_shiny_female == spriteAtual.currentSrc) {
+  } else if(pokemon.front_shiny_female == spriteAtual.currentSrc && pokemon.front_shiny != null) {
     document.querySelector('#sprite').setAttribute('src', pokemon.front_shiny)
   }
 }
