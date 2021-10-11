@@ -1,3 +1,5 @@
+var infoPokemon
+
 const api = axios.create({
   baseURL: 'https://pokeapi.co/api/v2/',
   timeout: 2500,
@@ -13,7 +15,7 @@ const formataTela = (pokemon) => {
   document.querySelector('#nome').innerHTML = pokemon.name
 
   document.querySelector('#sprite').setAttribute('src', pokemon.sprites.front_default)
-
+  
   //cria as divs com os tipos de pokemon
   const divTipos = document.querySelector('.tipos')
   pokemon.types.forEach((item) => {
@@ -46,6 +48,8 @@ const buscarPokemon = () => {
   api
     .get(`pokemon/${info}`)
     .then((pokemon) => {
+      localStorage.setItem('infoPokemon', JSON.stringify(pokemon))
+      infoPokemon = JSON.parse(localStorage.getItem('infoPokemon')) || []
       formataTela(pokemon.data)
     })
     .catch(() => {
@@ -57,6 +61,40 @@ const buscarPokemonSpecies = async () => {
   const info = url()
   const flavor = await api.get(`pokemon-species/${info}`)
   formataInformacoes(flavor.data)
+}
+
+const ativaDesativaShiny = () => {
+  const spriteAtual = document.querySelector('#sprite')
+  const pokemon = infoPokemon.data.sprites
+  if(pokemon.front_default == spriteAtual.currentSrc && pokemon.front_shiny != null) {
+    document.querySelector('#sprite').setAttribute('src', pokemon.front_shiny)
+  } else if(pokemon.front_female == spriteAtual.currentSrc && pokemon.front_shiny_female != null) {
+    document.querySelector('#sprite').setAttribute('src', pokemon.front_shiny_female)
+  } else if(pokemon.front_shiny_female == spriteAtual.currentSrc && pokemon.front_female != null) {
+    document.querySelector('#sprite').setAttribute('src', pokemon.front_female)
+  } else {
+    document.querySelector('#sprite').setAttribute('src', pokemon.front_default)
+  }
+}
+
+const ativaFemaleGender = () => {
+  const spriteAtual = document.querySelector('#sprite')
+  const pokemon = infoPokemon.data.sprites
+  if(pokemon.front_default == spriteAtual.currentSrc && pokemon.front_female != null) {
+    document.querySelector('#sprite').setAttribute('src', pokemon.front_female)
+  } else if(pokemon.front_shiny == spriteAtual.currentSrc && pokemon.front_shiny_female != null) {
+    document.querySelector('#sprite').setAttribute('src', pokemon.front_shiny_female)
+  }
+}
+
+const ativaMaleGender = () => {
+  const spriteAtual = document.querySelector('#sprite')
+  const pokemon = infoPokemon.data.sprites
+  if(pokemon.front_female == spriteAtual.currentSrc && pokemon.front_default != null) {
+    document.querySelector('#sprite').setAttribute('src', pokemon.front_default)
+  } else if(pokemon.front_shiny_female == spriteAtual.currentSrc && pokemon.front_shiny != null) {
+    document.querySelector('#sprite').setAttribute('src', pokemon.front_shiny)
+  }
 }
 
 buscarPokemon()
