@@ -97,5 +97,25 @@ const ativaMaleGender = () => {
   }
 }
 
+pokemonIdMenor = () => {
+  const spriteAtual = document.querySelector('#sprite')
+  var pokemonIdMenor = infoPokemon.data.id-1
+  if(pokemonIdMenor < 1){
+    pokemonIdMenor = 898
+  }
+  location = `pokemon.html?info=${pokemonIdMenor}`
+  buscarPokemon()
+}
+
+pokemonIdMaior = () => {
+  const spriteAtual = document.querySelector('#sprite')
+  var pokemonIdMaior = infoPokemon.data.id+1
+  if(pokemonIdMaior > 898){
+    pokemonIdMaior = 1
+  }
+  location = `pokemon.html?info=${pokemonIdMaior}`
+  buscarPokemon()
+}
+
 buscarPokemon()
 buscarPokemonSpecies()
