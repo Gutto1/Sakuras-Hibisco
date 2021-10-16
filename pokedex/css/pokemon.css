@@ -10,11 +10,6 @@ body {
 
 /* Content Line */
 
-@font-face {
-  font-family: 'Consolas';
-  src: url('../assets/consolab.TTF') format('TrueType');
-}
-
 #nome {
   text-transform: capitalize;
 }
@@ -38,27 +33,20 @@ body {
 }
 
 .shiny {
-  color: #ef2bb8;
-  font-family: 'Consolas', sans- rif;
-  font-weight: bolder;
   font-size: 20px;
   line-height: 10px;
 }
 
-.female {
-  color: #ef2bb8;
-  font-family: 'Consolas', sans-serif;
-  font-weight: bolder;
-  font-size: 36px;
-  line-height: 10px;
+#female {
+  fill: #ef2bb8;
+  width: 30px;
+  height: 30px;
 }
 
-.male {
-  color: #4567df;
-  font-family: 'Consolas', sans-serif;
-  font-weight: bolder;
-  font-size: 36px;
-  line-height: 10px;
+#male {
+  fill: #4567df;
+  width: 25px;
+  height: 25px;
 }
 
 .fav {
