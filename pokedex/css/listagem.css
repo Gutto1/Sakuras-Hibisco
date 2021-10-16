@@ -1,0 +1,28 @@
+.title {
+  text-align: center;
+  font-family: 'Russo One', sans-serif;
+}
+
+.main_content {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.linha_pokemon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.linha_pokemon span {
+  font-family: 'Russo One', sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  flex: 1;
+}
+
+.linha_pokemon .icone {
+  max-width: 26px;
+}
