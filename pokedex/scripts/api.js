@@ -119,3 +119,8 @@ pokemonIdMaior = () => {
 
 buscarPokemon()
 buscarPokemonSpecies()
+
+
+function meuFavorito(seleciona) {
+  seleciona.classList.toggle("fav-select");
+}
