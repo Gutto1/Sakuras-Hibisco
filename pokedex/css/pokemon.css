@@ -61,6 +61,17 @@ body {
   line-height: 10px;
 }
 
+.fav {
+  color: #666;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.2s ;
+}
+
+.fav-select {
+  color: #990000;
+}
+
 /* Footer Line */
 
 footer {
