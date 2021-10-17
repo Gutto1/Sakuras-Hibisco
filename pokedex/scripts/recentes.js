@@ -6,23 +6,45 @@ const carregaPagina = () => {
   lista.forEach((pokemon) => {
     const mainContent = document.querySelector('.main_content')
     const linha = document.createElement('article')
-    const img = document.createElement('img')
+    const iconePokemon = document.createElement('img')
     const span = document.createElement('span')
-    const svg = document.createElement('object')
+    const iconeLixeira = document.createElement('img')
 
-    svg.setAttribute('type', 'image/svg+xml')
-    svg.setAttribute('data', '../assets/trash.svg')
-    svg.classList.add('icone')
+    iconeLixeira.setAttribute('src', '../assets/trash.svg')
+    iconeLixeira.classList.add('icone')
+    iconeLixeira.setAttribute('onclick', `removeBusca(${pokemon.id})`)
+
+    iconePokemon.setAttribute('onclick', `navegarPokemon(${pokemon.id})`)
+    span.setAttribute('onclick', `navegarPokemon(${pokemon.id})`)
 
     linha.classList.add('linha_pokemon')
-    img.setAttribute('src', pokemon.sprites.front_default)
+    linha.setAttribute('id', `pokemon_${pokemon.id}`)
+    iconePokemon.setAttribute('src', pokemon.sprites.front_default)
     span.innerHTML = pokemon.name
 
-    linha.appendChild(img)
+    linha.appendChild(iconePokemon)
     linha.appendChild(span)
-    linha.appendChild(svg)
+    linha.appendChild(iconeLixeira)
     mainContent.appendChild(linha)
   })
+}
+
+const removeBusca = (id) => {
+  const lista = JSON.parse(localStorage.getItem('buscasRecentes'))
+
+  // remover o pokmeon com o id passado da lista
+  const novaLista = lista.filter((pokemon) => pokemon.id !== id)
+  localStorage.setItem('buscasRecentes', JSON.stringify(novaLista))
+
+  //tirar da página o article do pokémon removido
+  const linhaRemover = document.querySelector(`#pokemon_${id}`)
+  const mainContent = document.querySelector('.main_content')
+
+  mainContent.removeChild(linhaRemover)
+}
+
+const navegarPokemon = (id) => {
+  location = `pokemon.html?info=${id}`
 }
 
 carregaPagina()
