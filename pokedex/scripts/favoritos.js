@@ -1,8 +1,7 @@
-const carregaPagina = () => {
-  // ir até o localStorage buscar a lista de recentes
-  const lista = JSON.parse(localStorage.getItem('buscasRecentes')) || []
-  // renderizar a lista criando os elementos no DOM
-  lista.reverse()
+const carregaFavoritos = () => {
+  //buscar a lista de favoritos do localStorage e renderizar na tela
+  const lista = JSON.parse(localStorage.getItem('listaFavoritos')) || []
+
   lista.forEach((pokemon) => {
     const mainContent = document.querySelector('.main_content')
     const linha = document.createElement('article')
@@ -12,14 +11,13 @@ const carregaPagina = () => {
 
     iconeLixeira.setAttribute('src', '../assets/trash.svg')
     iconeLixeira.classList.add('icone')
-    iconeLixeira.setAttribute('onclick', `removeBusca(${pokemon.id})`)
-
-    iconePokemon.setAttribute('onclick', `navegarPokemon(${pokemon.id})`)
-    iconePokemon.setAttribute('alt', `Imagem do pokémon ${pokemon.name}`)
-    iconePokemon.setAttribute('title', `Imagem do pokémon ${pokemon.name}`)
+    iconeLixeira.setAttribute('onclick', `removeFavorito(${pokemon.id})`)
     iconeLixeira.setAttribute('alt', 'Remover pokémon')
 
+    iconePokemon.setAttribute('onclick', `navegarPokemon(${pokemon.id})`)
     span.setAttribute('onclick', `navegarPokemon(${pokemon.id})`)
+    iconePokemon.setAttribute('alt', `Imagem do pokémon ${pokemon.name}`)
+    iconePokemon.setAttribute('title', `Imagem do pokémon ${pokemon.name}`)
 
     linha.classList.add('linha_pokemon')
     linha.setAttribute('id', `pokemon_${pokemon.id}`)
@@ -33,12 +31,12 @@ const carregaPagina = () => {
   })
 }
 
-const removeBusca = (id) => {
-  const lista = JSON.parse(localStorage.getItem('buscasRecentes'))
+const removeFavorito = (id) => {
+  const lista = JSON.parse(localStorage.getItem('listaFavoritos'))
 
   // remover o pokmeon com o id passado da lista
   const novaLista = lista.filter((pokemon) => pokemon.id !== id)
-  localStorage.setItem('buscasRecentes', JSON.stringify(novaLista))
+  localStorage.setItem('listaFavoritos', JSON.stringify(novaLista))
 
   //tirar da página o article do pokémon removido
   const linhaRemover = document.querySelector(`#pokemon_${id}`)
@@ -51,4 +49,4 @@ const navegarPokemon = (id) => {
   location = `pokemon.html?info=${id}`
 }
 
-carregaPagina()
+carregaFavoritos()

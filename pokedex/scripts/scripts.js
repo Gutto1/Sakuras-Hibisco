@@ -8,3 +8,9 @@ const irDetalhes = () => {
 
   location = `pokemon.html?info=${info}`
 }
+
+const buscarAleatorio = () => {
+  //gerar um numero aleatório de 1 até 898 e navegar para a página de detalhes
+  const numAleatorio = Math.floor(Math.random() * 898)
+  location = `pokemon.html?info=${numAleatorio}`
+}

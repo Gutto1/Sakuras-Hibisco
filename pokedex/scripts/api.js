@@ -27,13 +27,24 @@ const formataTela = (pokemon) => {
     divTipos.appendChild(tipo)
   })
 
-  //depois de preencher todos os dados remove a img do pikachu triste
-  document.querySelector('.nao_encontrado').style.display = 'none'
+  //verificar se o pokemon é favorito para atualizar o ícone
+  const listaFavoritos = JSON.parse(localStorage.getItem('listaFavoritos')) || []
+  if (listaFavoritos.find((pokemon) => pokemon.id === infoPokemon.data.id)) {
+    document.querySelector('.fav').classList.add('fav-select')
+  }
+
+  //depois de preencher todos os dados remove o loading
+  document.querySelector('.loading').style.display = 'none'
   document.querySelector('.detalhes_invisivel').classList.add('detalhes')
   document.querySelector('.detalhes_invisivel').classList.remove('detalhes_invisivel')
+  document.querySelector('.botoes_navegacao_invisivel').classList.add('botoes_navegacao')
+  document.querySelector('.botoes_navegacao_invisivel').classList.remove('botoes_navegacao_invisivel')
 }
 
 const handleNaoEncontrado = () => {
+  document.querySelector('.loading').style.display = 'none'
+  document.querySelector('.nao_encontrado_invisivel').classList.add('nao_encontrado')
+  document.querySelector('.nao_encontrado_invisivel').classList.remove('nao_encontrado_invisivel')
   document.querySelector('footer').style.display = 'none'
 }
 
@@ -148,10 +159,22 @@ pokemonIdMaior = () => {
   buscarPokemon()
 }
 
+function meuFavorito() {
+  const lista = JSON.parse(localStorage.getItem('listaFavoritos')) || []
+  const pokemonAtual = JSON.parse(localStorage.getItem('infoPokemon'))
+
+  // verificar se o pokémon já é um favorito e remover da lista
+  if (lista.find((pokemon) => pokemon.id === pokemonAtual.data.id)) {
+    const novaLista = lista.filter((pokemon) => pokemon.id !== pokemonAtual.data.id)
+    localStorage.setItem('listaFavoritos', JSON.stringify(novaLista))
+    document.querySelector('.fav').classList.remove('fav-select')
+  } else {
+    // caso não seja um favorito adicionar na lista
+    lista.push(pokemonAtual.data)
+    localStorage.setItem('listaFavoritos', JSON.stringify(lista))
+    document.querySelector('.fav').classList.add('fav-select')
+  }
+}
+
 buscarPokemon()
 buscarPokemonSpecies()
-
-
-function meuFavorito(seleciona) {
-  seleciona.classList.toggle("fav-select");
-}

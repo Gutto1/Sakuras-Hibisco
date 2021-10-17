@@ -16,6 +16,17 @@ body {
 
 .seletores {
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.seletores p {
+  margin: 0;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .topo {
@@ -53,7 +64,7 @@ body {
   color: #666;
   font-size: 24px;
   cursor: pointer;
-  transition: all 0.2s ;
+  transition: all 0.2s;
 }
 
 .fav-select {
@@ -103,7 +114,9 @@ h6 {
   width: 100%;
 }
 
-.detalhes_invisivel {
+.detalhes_invisivel,
+.nao_encontrado_invisivel,
+.botoes_navegacao_invisivel {
   visibility: hidden;
   width: 0;
   height: 0;
@@ -126,6 +139,28 @@ main {
 
 .detalhes h2 {
   color: #000;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  flex: 1;
+}
+
+.loading img {
+  width: 50vw;
+  animation: balanca 1s ease-out infinite alternate;
+}
+
+@keyframes balanca {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
 }
 
 /* Responsiveness */
